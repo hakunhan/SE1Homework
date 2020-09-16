@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/SE1Homework/src/tut1_2/Ex7_10_Counter3.java" />
+    </excludeFromCompile>
+  </component>
+</project>
