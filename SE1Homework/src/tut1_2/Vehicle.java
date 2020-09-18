@@ -230,6 +230,15 @@ public class Vehicle {
   }
 
   /**
+   * @effect print message to the console information about the travelling i.e the type of vehicle,
+   *         starting location and number of seats
+   */
+  public void travel(String startPoint, String endPoint, int numberOfSeats){
+      System.out.printf("This vehicle: %s is going from %s to %s, with number of seats are %d"
+                        , toString(), startPoint, endPoint, numberOfSeats);
+  }
+
+  /**
    * @effects <pre>
    *            if this satisfies rep invariant
    *              return true 
@@ -242,7 +251,7 @@ public class Vehicle {
 
   @Override
   public String toString() {
-    return "Vehicle(" + name + ")";
+    return "" + this.getClass().getSimpleName() +  "(" + name + ")";
   }
 
   // validation methods

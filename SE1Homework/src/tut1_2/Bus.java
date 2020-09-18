@@ -39,11 +39,6 @@ public class Bus extends Vehicle {
     super(n, d, h, l, w, c, r);
   }
   
-  @Override  
-  public String toString() {
-    return "Bus(" + getName() + ")";
-  }
-  
   /**
    * @effects <pre>
    *   if w is valid 
@@ -106,5 +101,15 @@ public class Bus extends Vehicle {
       return false;
     else
       return true;
+  }
+
+  /**
+   * @effect print message to the console information about the travelling i.e the type of vehicle,
+   *         starting location and number of seats
+   */
+  @Override
+  public void travel(String startPoint, String endPoint, int numberOfSeats){
+    System.out.printf("This vehicle: \u25C8 (%s) is going from %s to %s, with number of seats are %d"
+            , toString(), startPoint, endPoint, numberOfSeats);
   }
 }

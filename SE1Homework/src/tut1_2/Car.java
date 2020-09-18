@@ -38,11 +38,6 @@ public class Car extends Vehicle {
     super(n, d, h, l, w, c, r);
   }
 
-  @Override
-  public String toString() {
-    return "Car(" + getName() + ")";
-  }
-
   /**
    * @effects <pre>
    *            if w is valid 
@@ -51,15 +46,9 @@ public class Car extends Vehicle {
    *              return false</pre>
    */
   @Override
-  @DomainConstraint(type="Double",min=MAX_WEIGHT,optional=false)
+  @DomainConstraint(type="Double",min=MIN_WEIGHT,max=MAX_WEIGHT,optional=false)
   protected boolean validateWeight(double w) {
-    if (!(super.validateWeight(w)))
-      return false;
-
-    if (w > MAX_WEIGHT)
-      return false;
-    else
-      return true;
+      return w > MIN_WEIGHT && w < MAX_WEIGHT;
   }
 
   /**
@@ -93,6 +82,16 @@ public class Car extends Vehicle {
       return false;
     else
       return true;
+  }
+
+  /**
+   * @effect print message to the console information about the travelling i.e the type of vehicle,
+   *         starting location and number of seats
+   */
+  @Override
+  public void travel(String startPoint, String endPoint, int numberOfSeats){
+    System.out.printf("This vehicle: \u25C7 (%s) is going from %s to %s, with number of seats are %d"
+            , toString(), startPoint, endPoint, numberOfSeats);
   }
 
   /**
