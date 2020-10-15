@@ -1,4 +1,4 @@
-package lect01_2_ch7.vehicles;
+package tut03.vehiclex;
 
 /**
  * @overview A test application for vehicles.

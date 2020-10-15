@@ -1,0 +1,3 @@
+Implementation that use for loop is better as the implementation
+which use while (true) loop that are terminated when accessing
+the array raises IndexOutOfBoundsException is over using exception.

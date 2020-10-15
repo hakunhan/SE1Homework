@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-import utils.DomainConstrains;
+import utils.DomainConstraint;
 /**
  * @overview arrayList<Integer> that get min, max elements of array
  * @attribute
@@ -9,9 +9,9 @@ import utils.DomainConstrains;
  * max Integer
  */
 public class MaxMinIntListA extends ArrayList<Integer> {
-    @DomainConstrains(type = "Integer")
+    @DomainConstraint(type = "Integer")
     private Integer min;
-    @DomainConstrains(type = "Integer")
+    @DomainConstraint(type = "Integer")
     private Integer max;
     
     /**

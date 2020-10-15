@@ -1,4 +1,4 @@
-package lect03_ch4.vehiclex;
+package tut03.vehiclex;
 
 import utils.AttrRef;
 import utils.DomainConstraint;
